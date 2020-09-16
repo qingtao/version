@@ -3,9 +3,11 @@
 ORG='github.com/qingtao'
 GITTAG=`git describe --tags --dirty --always`
 GITSHA=`git rev-parse HEAD`
+GITBRANCH=`git branch --show-current`
 
 GOFLAGS="$GOFLAGS -X ${ORG}/version.GitSHA=${GITSHA} \
     -X ${ORG}/version.GitTag=${GITTAG} \
+    -X ${ORG}/version.GitBranch=${GITBRANCH} \
 "
 
 if [ -f "VERSION" ]; then
