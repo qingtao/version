@@ -6,9 +6,9 @@ var (
 	// Version 版本号
 	Version = "v0.0.0"
 	// GitSHA git提交记录, 使用"git rev-parse HEAD"
-	GitSHA string
+	GitSHA = "unknown"
 	// GitTag git的标签, 使用"git describe --tags --dirty --always"
-	GitTag string
+	GitTag = "unknown"
 )
 
 func init() {
