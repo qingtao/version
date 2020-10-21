@@ -10,7 +10,7 @@ var (
 	GitSHA = "unknown"
 	// GitTag git的标签, 使用"git describe --tags --dirty --always"
 	GitTag = "unknown"
-	// GitBranch git分支
+	// GitBranch git分支, 使用"git rev-parse --abbrev-ref HEAD"
 	GitBranch = "unknown"
 )
 

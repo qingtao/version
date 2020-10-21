@@ -3,7 +3,7 @@
 ORG='github.com/qingtao'
 GITTAG=`git describe --tags --dirty --always`
 GITSHA=`git rev-parse HEAD`
-GITBRANCH=`git branch --show-current`
+GITBRANCH=`git rev-parse --abbrev-ref HEAD`
 
 GOFLAGS="$GOFLAGS -X ${ORG}/version.GitSHA=${GITSHA} \
     -X ${ORG}/version.GitTag=${GITTAG} \
